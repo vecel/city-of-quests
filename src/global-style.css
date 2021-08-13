@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    min-height: 100vh;
+    height: 100%;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
