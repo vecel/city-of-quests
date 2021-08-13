@@ -29,6 +29,73 @@ section#banner {
 }
 
 #slider {
-    width: 70%;
+    width: 60%;
     height: 100%;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.visible {
+    display: block;
+}
+
+.slide img.city {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.slide img.explorer {
+    position: absolute;
+    width: 10%;
+    z-index: 2;
+}
+
+img.explorer#warsow {
+    bottom: 5%;
+    right: 35%;
+}
+
+img.explorer#krakow {
+    bottom: 27%;
+    right: 23%;
+}
+
+.slide span {
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    font-size: 2em;
+}
+
+#slider-nav {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    width: 56px;
+    margin-left: -28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+#slider-nav li::after {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgb(174, 225, 235);
+    content: '';
+}
+
+#slider-nav li.active::after {
+    background-color: rgb(39, 59, 63);
 }
