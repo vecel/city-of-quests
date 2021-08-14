@@ -40,7 +40,7 @@ section#banner {
     height: 100%;
 }
 
-.visible {
+.active-slide {
     display: block;
 }
 
@@ -75,9 +75,17 @@ img.explorer#krakow {
     font-size: 2em;
 }
 
-#slider-nav {
+.slider-nav {
+    visibility: hidden;
+}
+
+#slider:hover .slider-nav {
+    visibility: visible;
+}
+
+#slider-bottom-nav {
     position: absolute;
-    bottom: 4%;
+    bottom: 2%;
     left: 50%;
     width: 56px;
     margin-left: -28px;
@@ -87,15 +95,66 @@ img.explorer#krakow {
     list-style: none;
 }
 
-#slider-nav li::after {
+#slider-bottom-nav li {
+    cursor: pointer;
+}
+
+#slider-bottom-nav li::after {
     display: block;
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background-color: rgb(174, 225, 235);
+    background-color: #fff6;
     content: '';
 }
 
-#slider-nav li.active::after {
+#slider-bottom-nav li.active::after {
     background-color: rgb(39, 59, 63);
+}
+
+#slider-bottom-nav li:hover::after {
+    background-color: #fff8;
+}
+
+#slider button {
+    position: absolute;
+    top: 50%;
+    height: 45px;
+    width: 45px;
+    margin-top: -20px;
+}
+
+#slider button.previous {
+    left: 0;
+}
+
+#slider button.next {
+    right: 0;
+}
+
+button.slider-nav:hover {
+    background-color: #fff4;
+}
+
+#slider button::after {
+    display: block;
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid #fff6;
+    border-left: 3px solid #fff6;
+}
+
+#slider button:hover::after {
+    border-color: #fff;
+}
+
+#slider button.previous::after {
+    transform: rotate(-45deg);
+    margin-left: 17px;
+}
+
+#slider button.next::after {
+    transform: rotate(135deg);
+    margin-left: 12px;
 }
