@@ -2,8 +2,8 @@
 const slider = document.querySelector('div#slider');
 
 const slides = slider.querySelectorAll('#slider .slide');
-const previousSlide = slider.querySelectorAll('button.previous');
-const nextSlide = slider.querySelectorAll('button.next');
+const previousSlide = slider.querySelector('button.previous');
+const nextSlide = slider.querySelector('button.next');
 
 // console.log(previousSlide);
 
@@ -23,13 +23,16 @@ const showSlide = function(n) {
 }
 
 const moveSlide = function(n) {
-    activeSlide += n;
-    showSlide(activeSlide);
+    showSlide(activeSlide + n);
 }
 
 console.log('it works')
-// previousSlide.addEventListener('click', () => {
-//     console.log('hello')
-// })
+
+previousSlide.addEventListener('click', () => {
+    showSlide(activeSlide - 1);
+});
+nextSlide.addEventListener('click', () => {
+    showSlide(activeSlide + 1);
+})
 
 showSlide(activeSlide);
