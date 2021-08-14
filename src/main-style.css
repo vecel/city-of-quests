@@ -37,11 +37,14 @@ section#banner {
 .slide {
     display: none;
     width: 60vw;
-    height: 100%;
+    height: 50vh;
+    opacity: 0;
+    transition: .4s;
 }
 
 .active-slide {
     display: block;
+    opacity: 1;
 }
 
 .slide img.city {
@@ -97,23 +100,22 @@ img.explorer#krakow {
 
 #slider-bottom-nav li {
     cursor: pointer;
-}
-
-#slider-bottom-nav li::after {
-    display: block;
     width: 14px;
     height: 14px;
     border-radius: 50%;
     background-color: #fff6;
-    content: '';
 }
 
-#slider-bottom-nav li.active::after {
-    background-color: rgb(39, 59, 63);
+#slider-bottom-nav li.active {
+    background-color: #0008;
 }
 
-#slider-bottom-nav li:hover::after {
+#slider-bottom-nav li:hover {
     background-color: #fff8;
+}
+
+#slider-bottom-nav li.active:hover {
+    background-color: #0009;
 }
 
 #slider button {
