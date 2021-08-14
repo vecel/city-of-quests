@@ -7,6 +7,7 @@ const nextSlide = slider.querySelector('button.next');
 const bottomNav = slider.querySelectorAll('ul#slider-bottom-nav li');
 
 let activeSlide = 0;
+let sliderInterval = setInterval(() => showSlide(activeSlide + 1), 5000);
 
 const showSlide = function (n) {
     let slideToShow = n;
@@ -19,6 +20,7 @@ const showSlide = function (n) {
     switchSlides(slideToShow);
     highlightNavigationDot(slideToShow);
     activeSlide = slideToShow;
+    sliderInterval = resetInterval(sliderInterval, () => showSlide(activeSlide + 1), 5000);
 };
 
 const switchSlides = function (slideToShow) {
@@ -31,6 +33,11 @@ const highlightNavigationDot = function (slideToShow) {
     bottomNav[slideToShow].classList.add('active');
 }
 
+const resetInterval = function (intervalId, callback, delay) {
+    clearInterval(intervalId);
+    return setInterval(callback, delay);
+}
+
 previousSlide.addEventListener('click', () => showSlide(activeSlide - 1));
 nextSlide.addEventListener('click', () => showSlide(activeSlide + 1));
 
@@ -39,5 +46,3 @@ for (const [i, navDot] of bottomNav.entries()) {
 }
 
 showSlide(activeSlide);
-
-setInterval(() => showSlide(activeSlide + 1), 5000);
