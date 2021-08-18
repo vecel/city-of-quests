@@ -6,6 +6,7 @@
 html, body {
     min-height: 100vh;
     height: 100%;
+    font-family: whitney ssm a,whitney ssm b,lucida grande,lucida sans,Verdana,Helvetica,Arial,sans-serif;
 }
 
 button {
