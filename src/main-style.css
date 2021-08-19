@@ -17,10 +17,6 @@ h2 {
     margin: 16px 0;
 }
 
-p {
-    /* text-align: justify; */
-}
-
 div#login {
     position: absolute;
     top: 0;
@@ -51,6 +47,8 @@ section#intro-banner {
 
 #introduction p {
     margin-top: 28px;
+    max-height: 400px;
+    overflow: scroll; /* adjust to mobile devices */
 }
 
 #introduction button {
