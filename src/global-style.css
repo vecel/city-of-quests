@@ -20,6 +20,11 @@ h1 {
     font-size: 1.9em;
 }
 
+h3 {
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
 p {
     font-size: 1.1em;
     line-height: 1.5;
@@ -27,4 +32,10 @@ p {
 
 ul {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #000;
 }
