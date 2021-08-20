@@ -222,6 +222,7 @@ button.slider-nav:hover {
 
 #city-selection {
     margin-top: 64px;
+    position: relative;
 }
 
 #city-selection h2 {
@@ -232,6 +233,14 @@ button.slider-nav:hover {
     display: flex;   
     flex-direction: row;
     position: relative;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#cards-container::-webkit-scrollbar {
+    display: none;
 }
 
 .card {
@@ -242,6 +251,14 @@ button.slider-nav:hover {
     border: 1px solid #ccc;
     flex-shrink: 0;
     color: #222;
+}
+
+.card.first {
+    margin-left: 72px;
+}
+
+.card.last {
+    margin-right: 72px;
 }
 
 .card:hover {
@@ -280,17 +297,22 @@ button.slider-nav:hover {
     position: absolute;
     top: 50%;
     margin-top: -18px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--secondary-color);
+    border-radius: 24px;
+    padding: 4px;
 }
 
 .card-nav.next {
-    right: 6px;
+    right: 12px;
 }
 
 .card-nav.previous {
-    left: 6px;
+    left: 12px;
 }
 
 .card-nav span {
     font-size: 36px;
-    color: var(--secondary-color);
+    color: #fff;
 }
