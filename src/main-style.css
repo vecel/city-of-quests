@@ -296,7 +296,7 @@ button.slider-nav:hover {
 .card-nav {
     position: absolute;
     top: 50%;
-    margin-top: -18px;
+    margin-top: -24px;
     width: 48px;
     height: 48px;
     background-color: var(--secondary-color);
@@ -315,4 +315,5 @@ button.slider-nav:hover {
 .card-nav span {
     font-size: 36px;
     color: #fff;
+    vertical-align: middle;
 }
