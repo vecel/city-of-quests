@@ -9,6 +9,10 @@ html, body {
     font-family: whitney ssm a,whitney ssm b,lucida grande,lucida sans,Verdana,Helvetica,Arial,sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 button {
     background-color: transparent;
     border: none;

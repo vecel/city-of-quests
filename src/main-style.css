@@ -1,5 +1,7 @@
 :root {
     --primary-color: #1A4975;
+    --secondary-color: #4169e1;
+    --complementary-color: #ca022a;
 }
 
 header {
@@ -52,7 +54,7 @@ section#intro-banner {
 }
 
 #introduction button {
-    background-color: royalblue;
+    background-color: var(--secondary-color);
     color: #fff;
     border-radius: 8px;
     padding: 10px 16px;
@@ -229,6 +231,7 @@ button.slider-nav:hover {
 #cards-container {
     display: flex;   
     flex-direction: row;
+    position: relative;
 }
 
 .card {
@@ -236,19 +239,17 @@ button.slider-nav:hover {
     width: 400px;
     height: 500px;
     margin: 0 48px;
-    /* padding: 24px; */
     border: 1px solid #ccc;
-    /* background-color: #dfdfff; */
     flex-shrink: 0;
     color: #222;
 }
 
 .card:hover {
-    box-shadow: 0 0 20px -10px black;
+    box-shadow: 0 0 20px -10px #000;
 }
 
 .card img {
-    width: 400px;
+    width: inherit;
     height: 200px;
 }
 
@@ -268,10 +269,28 @@ button.slider-nav:hover {
     height: 24px;
     margin-right: 16px;
     margin-bottom: 12px;
-    color: #ca022a;
+    color: var(--complementary-color);
 }
 
 .find-quest span {
-    display: inline;
     vertical-align: middle;
+}
+
+.card-nav {
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+}
+
+.card-nav.next {
+    right: 6px;
+}
+
+.card-nav.previous {
+    left: 6px;
+}
+
+.card-nav span {
+    font-size: 36px;
+    color: var(--secondary-color);
 }
