@@ -72,6 +72,8 @@ section#intro-banner {
 
 #introduction button:hover {
     background-color: #3159d1;
+    margin-top: -1px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .4);
 }
 
 /* SLIDER */
@@ -107,18 +109,18 @@ section#intro-banner {
 }
 
 .slide img.explorer {
-    width: 10%;
+    width: 40%;
     z-index: 2;
 }
 
-img.explorer#warsow {
-    bottom: 5%;
-    right: 35%;
+img.explorer#warsaw {
+    bottom: 0;
+    left: 0;
 }
 
 img.explorer#krakow {
-    bottom: 27%;
-    right: 23%;
+    bottom: 0;
+    right: 15%;
 }
 
 .slide span {
@@ -310,6 +312,12 @@ button.slider-nav:hover {
     background-color: var(--secondary-color);
     border-radius: 24px;
     padding: 4px;
+}
+
+.card-nav:hover {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .4);
+    margin-top: -25px;
+    background-color: #3159d1;
 }
 
 .card-nav.next {
