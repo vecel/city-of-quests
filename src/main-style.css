@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #1A4975;
+    --primary-color: #003fae;
     --secondary-color: #4169e1;
     --complementary-color: #ca022a;
 }
@@ -42,30 +42,47 @@ div#login {
 section#intro-banner {
     width: 100%;
     height: 600px;
-    margin-top: 0;
+    margin: 0 auto 280px auto;
     padding: 40px 0;
-    background-color: #fff; /* or #95D4DB; */
+    background-color: /*#fff;*/var(--secondary-color);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
+}
+
+#intro-banner::after {
+    content: '';
+    position: absolute;
+    height: 280px;
+    width: 100%;
+    left: 0;
+    bottom: -280px;
+    background: url(./img/wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* INTRODUCTION */
 
 #introduction {
     padding: 24px 16px;
-    margin: 0 48px;
+    margin: 90px 128px 0 128px;
+    color: #fff;
 }
 
 #introduction p {
     margin-top: 28px;
-    max-height: 400px;
+    max-height: 600px;
+    text-align: justify;
     overflow: scroll; /* adjust to mobile devices */
+    overflow-x: hidden;
+    scrollbar-color: white transparent;
 }
 
 #introduction button {
-    background-color: var(--secondary-color);
-    color: #fff;
+    background-color: #fff;
+    color: var(--primary-color);
     border-radius: 8px;
     padding: 10px 16px;
 }
